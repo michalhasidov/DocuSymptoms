@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+    <div *ngIf="!spinner" [ngClass]="'app-container-inner'">
+      <div class="app-speech-input" >
+
+        <button class="app-speech-input-btn" (click)="stopVoice ? stopService() : startService()">
+          </button>
+
+        <input style="width: 287px;
+        height: 52px;"
+        class="app-speech-input-form-control form-control" type="text" [(ngModel)]="txt" id="spokenText">
+        
+        <button class="my-button" (click)="sendSentence()">שלח</button>
+
+    </div>
+    </div>
+
+
+  <div *ngIf="spinner" [ngClass]="'circle-container'">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
